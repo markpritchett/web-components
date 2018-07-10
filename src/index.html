@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
     <link rel="stylesheet" href="site.css">
 </head>
+
 <body>
     <header>
         <h1>Web Components</h1>
@@ -14,10 +16,20 @@
     <section class="main">
         <div class="components">
             <div class="card">
+                <card-title text="Star Wars People"></card-title>
                 <star-wars-people></star-wars-people>
+            </div>
+            <div class="card">
+                <card-title text="Copy to Clipboard"></card-title>
+                <input type="text" id="foo">
+                <copy-to-clipboard-button data-target="#foo"></copy-to-clipboard-button>
             </div>
         </div>
     </section>
+    
 </body>
-<script src="components/StarWarsPeople.js"></script>
+<script src="components/CardTitle.js"></script>
+<script src="components/StarWarsPeople.js" type="module"></script>
+<script src="components/CopyToClipboardButton.js" type="module"></script>
+
 </html>

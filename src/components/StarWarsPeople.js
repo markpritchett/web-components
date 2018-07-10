@@ -1,3 +1,5 @@
+import { buttonCss } from "../css.js";
+
 function htmlToElement(html) {
   var template = document.createElement("template");
   html = html.trim();
@@ -15,10 +17,6 @@ class StarWarsPeople extends HTMLElement {
 
     shadowRoot.innerHTML = `
       <style>
-        h2 {
-          margin-bottom: 5px;
-          font-size: 2rem;
-        }
         .countSummary {
           font-size: 1.6rem;
           color: #868484;
@@ -36,20 +34,9 @@ class StarWarsPeople extends HTMLElement {
         li {
           list-style: none;
         }
-        button {
-          background-color: #048cfb;
-          color: #fff;
-          border: 0;
-          box-shadow: none;
-          border-radius: 0px;
-          padding: 1rem 1.5rem;
-        }
-        button:hover {
-            background-color: #0059C8;
-        }
+        ${buttonCss}
       </style>
       <div>
-        <h2>Star Wars People</h2>
         <div class="countSummary hidden">Showing <strong class="peopleCount"></strong> out of <strong class="count"></strong></div>
         <ul></ul>
         <button>Load More</button>

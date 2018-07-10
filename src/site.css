@@ -35,11 +35,16 @@ header h1 {
 }
 
 .card {
-  margin: 5rem 0;
+  margin: 5rem 2.5rem;
   padding: 1rem;
   background-color: #fff;
 }
 
 .spacer {
   margin-bottom: 10px;
+}
+
+input[type="text"] {
+  padding: 1rem 1.5rem;
+  border: 1px solid #4093fc;
 }
